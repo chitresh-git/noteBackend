@@ -14,7 +14,7 @@ const port = process.env.PORT || 3005; // Use PORT from environment variables or
 app.use(cors({
   origin: 'https://one-note-zeta.vercel.app', // Adjust this to your frontend domain
   methods: 'GET,POST,PUT,DELETE',
-  allowedHeaders: 'Content-Type,Authorization'
+  allowedHeaders: 'Content-Type,Authorization,auth-token'
 }));
 
 
