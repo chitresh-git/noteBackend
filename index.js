@@ -21,9 +21,9 @@ app.use(cors())
 
 app.use(express.json()); // this is the middle ware for using req.body in auth.js
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 // app.get('/login', (req, res) => {
 //   res.send('Hello login page!')
 // })
