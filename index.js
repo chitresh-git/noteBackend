@@ -1,11 +1,13 @@
 const connectTomongo=require("./db");
 const express = require('express')
 var cors=require('cors')
+require('dotenv').config();
+
 
 connectTomongo();
 
 const app = express()
-const port = 3005
+const port = process.env.PORT || 3005; // Use PORT from environment variables or default to 3005
 
 app.use(cors())
 
