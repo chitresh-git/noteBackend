@@ -9,13 +9,13 @@ connectTomongo();
 const app = express()
 const port = process.env.PORT || 3005; // Use PORT from environment variables or default to 3005
 
-app.use(cors())
+// app.use(cors())
 
-// app.use(cors({
-//   origin: 'https://one-note-zeta.vercel.app/', // Adjust this to your frontend domain
-//   methods: 'GET,POST,PUT,DELETE',
-//   allowedHeaders: 'Content-Type,Authorization'
-// }));
+app.use(cors({
+  origin: 'https://notebackend-1-l2ak.onrender.com/', // Adjust this to your frontend domain
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: 'Content-Type,Authorization'
+}));
 
 
 
