@@ -9,19 +9,15 @@ connectTomongo();
 const app = express()
 const port = process.env.PORT || 3005; // Use PORT from environment variables or default to 3005
 
-// app.use(cors())
+app.use(cors())
 
-app.use(cors({
-  origin: 'https://notebackend-1-l2ak.onrender.com', // Adjust this to your frontend domain
-  methods: 'GET,POST,PUT,DELETE',
-  allowedHeaders: 'Content-Type,Authorization'
-}));
+// app.use(cors({
+//   origin: 'https://notebackend-1-l2ak.onrender.com', // Adjust this to your frontend domain
+//   methods: 'GET,POST,PUT,DELETE',
+//   allowedHeaders: 'Content-Type,Authorization'
+// }));
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-})
+
 
 app.use(express.json()); // this is the middle ware for using req.body in auth.js
 
